@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+:root{
+--ink-black: #0F0E19ff;
+--soft-periwinkle: #A798EEff;
+--lavender: #F0E7FAff;
+--plum: #EEB7EEff;
+--deep-navy: #101147ff;
+--font-style: "Titillium Web", sans-serif;
+}
+
+body{
+    background-color: var(--ink-black);
+    color: var(--lavender);
+    font-family: var(--font-style);
+}

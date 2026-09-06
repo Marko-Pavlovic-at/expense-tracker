@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+<body>
+
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
+    <main>
+        <section id="balanceBox">
+            <p>Balance</p>
+        </section>
+
+        <section id="inputBox">
+            <form>
+                <label for="amountInput">Amount</label>
+                <input type="number" name="amountInput" id="amountInput">
+                <label for="descInput">Description</label>
+                <input type="text" id="descInput" name="descInput">
+                <label for="dateInput">Date</label>
+                <input type="date" id="dateInput" name="dateInput">
+                <label for="typeInput">Type</label>
+                <select name="typeInput" id="typeInput">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <label for="catInput">Category</label>
+                <select name="catInput" id="catInput">
+                    <option value="needs">Needs</option>
+                    <option value="wants">Wants</option>
+                    <option value="savings">Savings</option>
+                </select>
+            </form>
+        </section>
+        <section id="expense-dist">
+            <p>Expense Distrobution</p>
+        </section>
+        <section id="logs">
+            <p>Logs</p>
+        </section>
+
+        <section id="visual">
+            <p>Visual</p>
+        </section>
+    
+    </main>
+
+    <script src="expenses.js"></script>
+</body>
+</html>
