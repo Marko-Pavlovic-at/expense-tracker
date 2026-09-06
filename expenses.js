@@ -6,3 +6,9 @@ const catInput = document.querySelector("#catInput");
 const submitBtn = document.querySelector("#submitBtn");
 const balanceDisplay = document.querySelector("#balanceDisplay");
 const logs = document.querySelector("#logs");
+
+let transactions = [];
+
+submitBtn.addEventListener("click", function(){
+    console.log("clicked");
+})

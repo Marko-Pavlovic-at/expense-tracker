@@ -62,7 +62,7 @@ Fonts:
 
 2. Render
     - Grab inputs selects button and logs in JS DONE
-    - make an empty Array
+    - make an empty Array DONE
     - make a render function
     - inside render function empty the innerhtml
     - write an foreach that goes trough array creates and appends the elements
