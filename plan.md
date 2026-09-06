@@ -63,10 +63,10 @@ Fonts:
 2. Render
     - Grab inputs selects button and logs in JS DONE
     - make an empty Array DONE
-    - make a render function
-    - inside render function empty the innerhtml
-    - write an foreach that goes trough array creates and appends the elements
-    - on button click push the input values to the array
-    - after submit empty the input fields
+    - make a render function DONE
+    - inside render function empty the innerhtml DONE
+    - write an foreach that goes trough array creates and appends the elements DONE
+    - on button click push the input values to the array DONE
+    - after submit empty the input fields DONE
     - on empty inputs submit return error msg
-    - call render on button click and at startup 
+    - call render on button click and at startup DONE

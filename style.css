@@ -116,3 +116,8 @@ button:hover{
     gap: 1rem;
     font-size: 1rem;
 }
+
+.errorText{
+    color: red;
+    font-size: 1rem;
+}
