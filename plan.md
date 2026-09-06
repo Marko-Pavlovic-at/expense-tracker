@@ -12,7 +12,7 @@ An App to track Expenses Balance always visibe User can track Expenses see the B
  To get Balance create a new array from the main one with only the numbers and sum them against each other
 
 ## MVP v1
-- Grid Layout
+- Grid Layout DONE
 - inputs add li elements
 - Balance gets updated 
 - delete Logic
@@ -59,3 +59,14 @@ Fonts:
     - give children grid area names DONE
     - give parent repeat 4 1fr DONE
     - use grid areas to create the 3 x 2 Design DONE
+
+2. Render
+    - Grab inputs selects button and logs in JS DONE
+    - make an empty Array
+    - make a render function
+    - inside render function empty the innerhtml
+    - write an foreach that goes trough array creates and appends the elements
+    - on button click push the input values to the array
+    - after submit empty the input fields
+    - on empty inputs submit return error msg
+    - call render on button click and at startup 
