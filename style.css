@@ -104,3 +104,15 @@ button:hover{
 .purpleBtn{
     background-color: var(--soft-periwinkle);
 }
+
+#logs{
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+.logList{
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+}
