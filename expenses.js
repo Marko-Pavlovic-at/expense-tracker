@@ -10,7 +10,9 @@ const errorBox = document.querySelector("#errorBox");
 
 let transactions = [];
 
+
 submitBtn.addEventListener("click", function(){
+    errorBox.innerHTML =""
       if(amountInput.value  === "" || descInput.value === "" || dateInput.value === "" || typeInput.value === "" || catInput.value === "" ){
     const errorMsg = document.createElement("p");
     errorMsg.textContent = "Please fill in all Fields!";
@@ -42,21 +44,21 @@ submitBtn.addEventListener("click", function(){
 
 function render(){
     logs.innerHTML="";
-    errorBox.innerHTML =""
+    
     
     transactions.forEach((transaction) =>{
         const logList = document.createElement("div");
         logList.className = "logList"
        const amountItem = document.createElement("p");
-       amountItem.textContent = `${amountInput.value}€`;
+       amountItem.textContent = `${transaction.amount}€`;
        const descItem = document.createElement("p");
-       descItem.textContent = descInput.value;
+       descItem.textContent = transaction.desc;
        const dateItem = document.createElement("p");
-       dateItem.textContent = dateInput.value;
+       dateItem.textContent = transaction.date;
        const typeItem = document.createElement("p");
-       typeItem.textContent = typeInput.value;
+       typeItem.textContent = transaction.type;
        const catItem = document.createElement("p");
-       catItem.textContent = catInput.value;
+       catItem.textContent = transaction.cat;
        logList.append(amountItem,descItem, dateItem, typeItem,catItem);
        logs.append(logList);
        
