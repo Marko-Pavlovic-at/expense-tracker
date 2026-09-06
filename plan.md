@@ -53,5 +53,9 @@ Fonts:
     - Basic HTML Structure DONE
     - CSS set Root Variables Connect to HTML DONE
     - JS Connect to HTML DONE
+    - Style the form and the inputs
 
 1. Grid Layout :
+    - give children grid area names DONE
+    - give parent repeat 4 1fr DONE
+    - use grid areas to create the 3 x 2 Design DONE

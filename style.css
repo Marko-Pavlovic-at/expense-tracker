@@ -14,4 +14,93 @@ body{
     background-color: var(--ink-black);
     color: var(--lavender);
     font-family: var(--font-style);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+main{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "balance input input dist"
+    "logs logs visual visual"
+    ;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+ #balanceBox{
+    grid-area: balance;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--plum);
+
+ }
+
+ #inputBox{
+    grid-area: input;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid var(--plum);
+    padding: 1rem;
+
+ }
+ #expenseDist{
+    grid-area: dist;
+    border: 1px solid var(--plum);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #logs{
+    grid-area: logs;
+     border: 1px solid var(--plum);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #visual{
+    grid-area: visual;
+    border: 1px solid var(--plum);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+input{
+    background-color: var(--deep-navy);
+    color: var(--lavender);
+}
+
+select{
+    background-color: var(--deep-navy);
+    color: var(--lavender);
+}
+button{
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--lavender);
+    transition: background-color 0.5s ease;
+    font-size: 1.2rem;
+}
+
+button:hover{
+    background-color: var(--plum);
+}
+
+
+.purpleBtn{
+    background-color: var(--soft-periwinkle);
 }
