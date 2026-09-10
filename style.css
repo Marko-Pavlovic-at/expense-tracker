@@ -69,6 +69,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
  }
 
  #visual{
@@ -105,11 +106,7 @@ button:hover{
     background-color: var(--soft-periwinkle);
 }
 
-#logs{
- display: flex;
- flex-direction: column;
- 
-}
+
 
 .logList{
     display: flex;

@@ -28,7 +28,7 @@ submitBtn.addEventListener("click", function(){
             desc: descInput.value,
             date : dateInput.value,
             type: typeInput.value,
-            cat: catInput.value
+            
         }
     )
 
@@ -39,7 +39,7 @@ submitBtn.addEventListener("click", function(){
     descInput.value ="";
     dateInput.value ="";
     typeInput.value ="";
-    catInput.value = "";
+    
 })
 
 function render(){
@@ -57,9 +57,8 @@ function render(){
        dateItem.textContent = transaction.date;
        const typeItem = document.createElement("p");
        typeItem.textContent = transaction.type;
-       const catItem = document.createElement("p");
-       catItem.textContent = transaction.cat;
-       logList.append(amountItem,descItem, dateItem, typeItem,catItem);
+       
+       logList.append(amountItem,descItem, dateItem, typeItem);
        logs.append(logList);
        
     })

@@ -13,11 +13,12 @@ An App to track Expenses Balance always visibe User can track Expenses see the B
 
 ## MVP v1
 - Grid Layout DONE
-- inputs add li elements
+- render logs DONE
 - Balance gets updated 
 - delete Logic
 - edit logic
 - Data Persits
+- live on github pages
 
 ## Post MVP v2
 
@@ -70,3 +71,14 @@ Fonts:
     - after submit empty the input fields DONE
     - on empty inputs submit return error msg
     - call render on button click and at startup DONE
+
+3. Update Balance
+    - convert amount into number when pushing to the array
+    - write a function calcBalance that takes an array as an argument
+    - use filter to get two arrays from the main one only expenses and only incomes
+    - then use reduce on each one to get two sum values 
+    - cacl them in the balance var
+    - return balance
+    - add show in dom in the render function
+    - call function in render
+
