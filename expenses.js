@@ -2,7 +2,6 @@ const amountInput = document.querySelector("#amountInput");
 const descInput = document.querySelector("#descInput");
 const dateInput = document.querySelector("#dateInput");
 const typeInput = document.querySelector("#typeInput");
-const catInput = document.querySelector("#catInput");
 const submitBtn = document.querySelector("#submitBtn");
 const balanceDisplay = document.querySelector("#balanceDisplay");
 const logs = document.querySelector("#logs");
@@ -13,7 +12,7 @@ let transactions = [];
 
 submitBtn.addEventListener("click", function(){
     errorBox.innerHTML =""
-      if(amountInput.value  === "" || descInput.value === "" || dateInput.value === "" || typeInput.value === "" || catInput.value === "" ){
+      if(amountInput.value  === "" || descInput.value === "" || dateInput.value === "" || typeInput.value === ""){
     const errorMsg = document.createElement("p");
     errorMsg.textContent = "Please fill in all Fields!";
     errorMsg.className ="errorText";
