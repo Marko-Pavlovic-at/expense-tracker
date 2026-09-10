@@ -7,7 +7,13 @@ const balanceDisplay = document.querySelector("#balanceDisplay");
 const logs = document.querySelector("#logs");
 const errorBox = document.querySelector("#errorBox");
 
-let transactions = [];
+let balance = 0;
+let transactions = [
+    {id: 1, amount: 2000, desc : "Salary", date:"9.1.2026", type: "Income"},
+    {id: 2, amount: 1000, desc : "Laptop", date:"15.1.2026", type: "Expense"},
+    {id: 3, amount: 500, desc : "Freelancing", date:"15.2.2026", type: "Income"},
+    {id: 2, amount: 300, desc : "headphones", date:"15.3.2026", type: "Expense"},
+];
 
 
 submitBtn.addEventListener("click", function(){
@@ -23,7 +29,7 @@ submitBtn.addEventListener("click", function(){
     transactions.push(
         {
             id: Date.now(),
-            amount: amountInput.value,
+            amount: Number(amountInput.value),
             desc: descInput.value,
             date : dateInput.value,
             type: typeInput.value,
@@ -31,7 +37,8 @@ submitBtn.addEventListener("click", function(){
         }
     )
 
-  
+
+    calcBalance(transactions);
     render();
 
     amountInput.value = "";
@@ -43,6 +50,7 @@ submitBtn.addEventListener("click", function(){
 
 function render(){
     logs.innerHTML="";
+    balanceDisplay.textContent = balance
     
     
     transactions.forEach((transaction) =>{
@@ -63,4 +71,17 @@ function render(){
     })
 }
 
+function calcBalance(arr){
+    const incomes = arr.filter(item => item.type === "Income");
+    const expenses = arr.filter(item => item.type === "Expense");
+    const incomeSum = incomes.reduce(function(acc,item){
+        return acc + item.amount
+    },0)
+    const expenseSum = expenses.reduce(function(acc,item){
+        return acc + item.amount
+    },0)
+    balance = incomeSum - expenseSum;
+    
+}
+calcBalance(transactions);
 render();
