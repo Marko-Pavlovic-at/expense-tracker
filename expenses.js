@@ -8,6 +8,7 @@ const logs = document.querySelector("#logs");
 const errorBox = document.querySelector("#errorBox");
 
 let balance = 0;
+let editId = null;
 let transactions = [
     {id: 1, amount: 2000, desc : "Salary", date:"9.1.2026", type: "Income"},
     {id: 2, amount: 1000, desc : "Laptop", date:"15.1.2026", type: "Expense"},
@@ -68,12 +69,23 @@ function render(){
        const remBtn = document.createElement("button");
        remBtn.className = "button redBtn";
        remBtn.textContent = "X"
-       
-       logList.append(amountItem,descItem, dateItem, typeItem, remBtn);
+       const editBtn = document.createElement("button");
+       editBtn.className = "button blueBtn";
+       const editImg = document.createElement("img");
+       editImg.src = "./edit.png";
+       editImg.className = "editImg";
+       editBtn.append(editImg);
+       logList.append(amountItem,descItem, dateItem, typeItem, remBtn, editBtn);
        logs.append(logList);
 
        remBtn.addEventListener("click", function(e){
         transactions = transactions.filter(item => item.id !== transaction.id);
+        render();
+       })
+
+       editBtn.addEventListener("click", function(e){
+        editId = transaction.id;
+        console.log(editId);
         render();
        })
        
@@ -92,5 +104,7 @@ function calcBalance(arr){
     balance = incomeSum - expenseSum;
     
 }
+
+
 
 render();

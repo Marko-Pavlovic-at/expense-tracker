@@ -15,7 +15,7 @@ An App to track Expenses Balance always visibe User can track Expenses see the B
 - Grid Layout DONE
 - render logs DONE
 - Balance gets updated DONE
-- delete Logic
+- delete Logic DONE
 - edit logic
 - Data Persits
 - live on github pages
@@ -87,3 +87,9 @@ Fonts:
     - onclick write a filter that creates a new array without  the object that is associated with the id DONE
     - call render inside the button DONE
 
+5. Edit Logic
+    - create a edit button to each logitem DONE
+    - give it a class DONE
+    - style it DONE
+    - assign it event listener DONE
+    - in render if that compares transid and edit id and replaces text with inputs
