@@ -81,9 +81,9 @@ Fonts:
     - add show in dom in the render function DONE
 
 4. Delete Logic
-    - create and append x Button in render where the p Elements are
-    - give the button a class to style it
-    - inside the forech loop write an eventlistener for delbtn because the var wont be avaliable outside
-    - onclick write a filter that creates a new array without  the object that is associated with the id
-    - call render inside the button
+    - create and append x Button in render where the p Elements are DONE
+    - give the button a class to style it DONE
+    - inside the forech loop write an eventlistener for delbtn because the var wont be avaliable outside DONE
+    - onclick write a filter that creates a new array without  the object that is associated with the id DONE
+    - call render inside the button DONE
 

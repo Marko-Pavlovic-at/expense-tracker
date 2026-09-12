@@ -12,7 +12,7 @@ let transactions = [
     {id: 1, amount: 2000, desc : "Salary", date:"9.1.2026", type: "Income"},
     {id: 2, amount: 1000, desc : "Laptop", date:"15.1.2026", type: "Expense"},
     {id: 3, amount: 500, desc : "Freelancing", date:"15.2.2026", type: "Income"},
-    {id: 2, amount: 300, desc : "headphones", date:"15.3.2026", type: "Expense"},
+    {id: 4, amount: 300, desc : "headphones", date:"15.3.2026", type: "Expense"},
 ];
 
 
@@ -71,6 +71,11 @@ function render(){
        
        logList.append(amountItem,descItem, dateItem, typeItem, remBtn);
        logs.append(logList);
+
+       remBtn.addEventListener("click", function(e){
+        transactions = transactions.filter(item => item.id !== transaction.id);
+        render();
+       })
        
     })
 }
