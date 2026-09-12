@@ -38,7 +38,7 @@ submitBtn.addEventListener("click", function(){
     )
 
 
-    calcBalance(transactions);
+    
     render();
 
     amountInput.value = "";
@@ -50,7 +50,8 @@ submitBtn.addEventListener("click", function(){
 
 function render(){
     logs.innerHTML="";
-    balanceDisplay.textContent = balance
+    calcBalance(transactions);
+    balanceDisplay.textContent = balance + "€"
     
     
     transactions.forEach((transaction) =>{
@@ -64,8 +65,11 @@ function render(){
        dateItem.textContent = transaction.date;
        const typeItem = document.createElement("p");
        typeItem.textContent = transaction.type;
+       const remBtn = document.createElement("button");
+       remBtn.className = "button redBtn";
+       remBtn.textContent = "X"
        
-       logList.append(amountItem,descItem, dateItem, typeItem);
+       logList.append(amountItem,descItem, dateItem, typeItem, remBtn);
        logs.append(logList);
        
     })
@@ -83,5 +87,5 @@ function calcBalance(arr){
     balance = incomeSum - expenseSum;
     
 }
-calcBalance(transactions);
+
 render();

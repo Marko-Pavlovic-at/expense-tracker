@@ -14,7 +14,7 @@ An App to track Expenses Balance always visibe User can track Expenses see the B
 ## MVP v1
 - Grid Layout DONE
 - render logs DONE
-- Balance gets updated 
+- Balance gets updated DONE
 - delete Logic
 - edit logic
 - Data Persits
@@ -79,4 +79,11 @@ Fonts:
     - then use reduce on each one to get two sum values DONE
     - cacl them in the balance var DONE
     - add show in dom in the render function DONE
+
+4. Delete Logic
+    - create and append x Button in render where the p Elements are
+    - give the button a class to style it
+    - inside the forech loop write an eventlistener for delbtn because the var wont be avaliable outside
+    - onclick write a filter that creates a new array without  the object that is associated with the id
+    - call render inside the button
 

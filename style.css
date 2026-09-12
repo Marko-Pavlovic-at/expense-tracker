@@ -68,8 +68,8 @@ p{
      border: 1px solid var(--plum);
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    padding: 1rem;
  }
 
  #visual{
@@ -109,12 +109,23 @@ button:hover{
 
 
 .logList{
-    display: flex;
-    gap: 1rem;
     font-size: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  
+    
 }
 
 .errorText{
     color: red;
     font-size: 1rem;
 }
+
+.redBtn{
+    background-color: var(--deep-navy);
+    color: red;
+    margin-left: auto;
+}
+
