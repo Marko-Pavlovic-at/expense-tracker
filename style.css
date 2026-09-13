@@ -24,7 +24,7 @@ main{
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     "balance input input dist"
-    "logs logs visual visual"
+    "logs logs logs visual"
     ;
 }
 
@@ -111,9 +111,9 @@ button:hover{
 .logList{
     font-size: 1rem;
     display: flex;
-    gap: 0.3rem;
+    gap: 0.5rem;
     align-items: center;
-    justify-content: center;
+   
   
     
 }
@@ -126,10 +126,15 @@ button:hover{
 .redBtn{
     background-color: var(--deep-navy);
     color: red;
-    margin-left: auto;
+    
 }
 
 .editImg{
     height: 1rem;
+    
 }
 
+.greenBtn{
+    background-color: green;
+    
+}

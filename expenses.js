@@ -58,7 +58,50 @@ function render(){
     transactions.forEach((transaction) =>{
         const logList = document.createElement("div");
         logList.className = "logList"
-       const amountItem = document.createElement("p");
+        if(transaction.id === editId){
+            
+            const aInput = document.createElement("input");
+            aInput.type = "number";
+            aInput.placeholder = "amount";
+            const dInput = document.createElement("input");
+            dInput.type = "text";
+            dInput.placeholder = "description";
+            const daInput = document.createElement("input");
+            daInput.type = "date";
+            const sel = document.createElement("select");
+            const optIn = document.createElement("option");
+            const optEx = document.createElement("option");
+            optIn.value = "Income";
+            optEx.value = "Expense";
+            optIn.textContent = "Income";
+            optEx.textContent = "Expense";
+            sel.append(optIn,optEx);
+            const confirmBtn = document.createElement("button");
+            confirmBtn.className = "button greenBtn";
+            confirmBtn.textContent = "ok";
+            const cancelBtn = document.createElement("button");
+            cancelBtn.className = "button redBtn"
+            cancelBtn.textContent = "X";
+            
+            logList.append(aInput,dInput,daInput, sel, confirmBtn, cancelBtn);
+
+            confirmBtn.addEventListener("click", function(){
+                transaction.amount = Number(aInput.value);
+                transaction.desc = dInput.value;
+                transaction.date = daInput.value;
+                transaction.type = sel.value;
+                editId = null;
+                render();
+
+            })
+
+            cancelBtn.addEventListener("click", function(){
+                editId = null;
+                render();
+            })
+        }
+        else{
+                       const amountItem = document.createElement("p");
        amountItem.textContent = `${transaction.amount}€`;
        const descItem = document.createElement("p");
        descItem.textContent = transaction.desc;
@@ -76,7 +119,7 @@ function render(){
        editImg.className = "editImg";
        editBtn.append(editImg);
        logList.append(amountItem,descItem, dateItem, typeItem, remBtn, editBtn);
-       logs.append(logList);
+       
 
        remBtn.addEventListener("click", function(e){
         transactions = transactions.filter(item => item.id !== transaction.id);
@@ -88,6 +131,8 @@ function render(){
         console.log(editId);
         render();
        })
+        }
+logs.append(logList);
        
     })
 }
