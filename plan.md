@@ -16,7 +16,7 @@ An App to track Expenses Balance always visibe User can track Expenses see the B
 - render logs DONE
 - Balance gets updated DONE
 - delete Logic DONE
-- edit logic
+- edit logic DONE
 - Data Persits
 - live on github pages
 
@@ -92,4 +92,8 @@ Fonts:
     - give it a class DONE
     - style it DONE
     - assign it event listener DONE
-    - in render if that compares transid and edit id and replaces text with inputs
+    - in render if that compares transid and edit id and replaces text with inputs DONE
+
+6. Local Storage
+    - setItem with json.stringfy everywhere the Array gets changed
+    - get item at startup with json parse

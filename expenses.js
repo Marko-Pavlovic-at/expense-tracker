@@ -7,6 +7,9 @@ const balanceDisplay = document.querySelector("#balanceDisplay");
 const logs = document.querySelector("#logs");
 const errorBox = document.querySelector("#errorBox");
 
+
+const stored = JSON.parse(localStorage.getItem("data"));
+
 let balance = 0;
 let editId = null;
 let transactions = [
@@ -15,6 +18,8 @@ let transactions = [
     {id: 3, amount: 500, desc : "Freelancing", date:"15.2.2026", type: "Income"},
     {id: 4, amount: 300, desc : "headphones", date:"15.3.2026", type: "Expense"},
 ];
+
+transactions = stored || [];
 
 
 submitBtn.addEventListener("click", function(){
@@ -36,7 +41,9 @@ submitBtn.addEventListener("click", function(){
             type: typeInput.value,
             
         }
+        
     )
+    localStorage.setItem("data", JSON.stringify(transactions))
 
 
     
@@ -90,6 +97,7 @@ function render(){
                 transaction.desc = dInput.value;
                 transaction.date = daInput.value;
                 transaction.type = sel.value;
+                localStorage.setItem("data", JSON.stringify(transactions));
                 editId = null;
                 render();
 
@@ -123,6 +131,7 @@ function render(){
 
        remBtn.addEventListener("click", function(e){
         transactions = transactions.filter(item => item.id !== transaction.id);
+        localStorage.setItem("data", JSON.stringify(transactions))
         render();
        })
 
